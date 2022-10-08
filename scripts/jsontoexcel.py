@@ -134,9 +134,9 @@ class jsonToExcel:
         """Translates the associate information alongside their quiz scores to a Pandas DataFrame.
 
         inputs:
-            column_names: [array: str]
+            column_names: [list: str]
             row_values: [list: str]
-            associate_ids: [string]
+            associate_ids: [array: str]
             associate_count: [int]
             trainee_ids: [set: str]
 
