@@ -152,6 +152,7 @@ class jsonToExcel:
             row_values: [list: str]
             associate_ids: [array: str]
             associate_count: [int]
+            raw_json_batch_report: [JSON]
             trainee_ids: [set: str]
 
         output:
