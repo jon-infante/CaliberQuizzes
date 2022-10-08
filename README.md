@@ -8,7 +8,7 @@
 > &rarr; Navigate to the repo <br>
 > &rarr; [cmd] python3 -m venv .venv <br>
 > &rarr; [cmd] source .venv/Scripts/activate (Windows) | source .venv/bin/activate (Unix/Mac) <br>
-> &rarr; [cmd] pip3 install requirements.txt <br>
+> &rarr; [cmd] pip3 install -r requirements.txt <br>
 > &rarr; Insert the exported **quizzes JSON file** and the cohort's **batch report** (also JSON) in the **"input" folder** <br>
 > &rarr; [cmd] python3 app.py <br>
 
@@ -16,8 +16,6 @@ Check the **output** folder for the resulting Excel (.xlsx) file. <br>
 
   
 
-<br>
-<br>
 <br>
 <br>
 <br>
