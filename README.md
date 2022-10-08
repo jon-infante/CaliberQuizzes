@@ -3,7 +3,7 @@
 <p align="center"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white" />
   
-> &rarr; Download and install pip3 <br>
+> &rarr; Download and install python3 <br>
 > &rarr; [cmd] git clone https://github.com/jon-infante/CaliberQuizzes.git <br>
 > &rarr; Navigate to the repo <br>
 > &rarr; [cmd] python3 -m venv .venv <br>
