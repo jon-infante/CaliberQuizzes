@@ -10,19 +10,27 @@ class jsonToExcel:
         pass
 
     def main(self):
-        json_data = self.retrieveQuizDataAndNames()
+        try:
+            json_data = self.retrieveQuizDataAndNames()
+        except:
+            print("\nYou must have at least the exported quiz results in the input folder, batch report is optional.")
+            return
         parsed_json_data = self.parseJsonData(json_data, 25) #Change number here if there is a larger batch, or smaller if you want a cleaner excel sheet to match associate count
         self.exportToExcel(parsed_json_data)
+
+        print("\nSuccess! Check the output folder for the Excel file.")
 
 
     def retrieveQuizDataAndNames(self):
         """Retrieves exported quiz data from the inputs folder, as well as the corresponding batch report to match
         associate ids with names.
 
-        output: Dict
+        output: 
+            jason_data_dict: [dict]
         """
         json_input_path = os.path.join(os.getcwd(), "input")
         json_files = [ x for x in os.listdir(json_input_path) if x.endswith("json")] #Checking for every json file inside the inputs folder
+
         json_data = list()
         for json_file in json_files:
             json_file_path = os.path.join(json_input_path, json_file)
@@ -37,34 +45,36 @@ class jsonToExcel:
         """Identifies the two given json files to see which one is the quiz results, and which is the batch report.
 
         inputs:
-            json_data: [List: string]
+            json_data: [list: string]
 
-        output: Dict
+        output: 
+            json_data_dict: [dict]
         """
         json_data_dict = {}
 
         if(len(json_data)) > 1: #Checking if we have both the batch report and quiz results, or just the quiz results
             try: #Seeing if the salesforce batch id exists in the json file, if so, we know its the batch report
-                sf_id = json_data[0]["batchSfId"]
-                json_data_dict["quizResults"] = json_data[1] #Switching the order of the json files to be matched (0 is batch report, 1 is quiz results)
+                sf_id = json_data[0]["batchSfId"] #Exception thrown here if files are in the correct order
+                json_data_dict["quizResults"] = json_data[1] #Switching the order of the json files to be aligned for future use (0 is batch report, 1 is quiz results)
                 json_data_dict["batchReport"] = json_data[0]
 
             except: #We know that the first json file in the list is not the batch report (they are in the correct order, with quiz results being first in the list, so we do nothing)
                 pass
+
         else: #We only have the quiz results
             json_data_dict["quizResults"] = json_data[0]
             json_data_dict["batchReport"] = False
 
-
         return json_data_dict
 
     def exportToExcel(self, json_data_df):
-        """Transforms the quiz json data into a readable format for Excel.
+        """Transforms the fully formatted DataFrame into a readable format for Excel.
 
         inputs:
-            json_data: [Dict]
+            json_data_df: Pandas DataFrame
 
-        output: .xlsx file
+        output: 
+            .xlsx file
         """
         df = json_data_df.to_excel("output/quizResults.xlsx")
 
@@ -72,9 +82,12 @@ class jsonToExcel:
         """Matches the inputted associate salesforce ids to their name from the batch report.
 
         inputs:
-            raw_json_batch_report: [Dict]
+            raw_json_batch_report: [dict]
             associate_ids: [array: str]
             associate_ids_set: [set: str]
+
+        output:
+            associate_names: [array: str]
         """
         associate_names = [''] * (len(associate_ids)-1) #Empty array of strings to match indexes to associate id
         not_found = len(associate_ids) - 1
@@ -97,9 +110,10 @@ class jsonToExcel:
         """Parses the raw json file into a formatted version for excel.
 
         inputs:
-            json_data: [Dict]
+            json_data: [dict]
 
-        output: Pandas DataFrame
+        output: 
+            df: [Pandas DataFrame]
         """
         raw_json_quiz = json_data["quizResults"]["quizzes"]
         raw_json_batch_report = json_data["batchReport"]
@@ -141,18 +155,21 @@ class jsonToExcel:
             trainee_ids: [set: str]
 
         output:
-            Pandas DataFrame
+            df: [Pandas DataFrame]
         """
-        column_names.insert(0,"Name") #Prepends ID column for pd df
-        associate_names = self.matchAssociateIDtoName(raw_json_batch_report, associate_ids, trainee_ids) #Returns a list of names associate with each associate ID
-        row_values.insert(0, associate_names)
+        try: #Checking if we have the batch report file, if so we create the names column with the associates names
+            associate_names = self.matchAssociateIDtoName(raw_json_batch_report, associate_ids, trainee_ids) #Returns a list of names associated with each associate ID
+            column_names.insert(0,"Name") #Prepends Name column for pd df
+            row_values.insert(0, associate_names)
+        except: #If we don't have the batch report, we supply the IDs of the associates instead of the names
+            column_names.insert(0,"ID") #Prepends ID column for pd df
+            row_values.insert(0, associate_ids)
 
         df = pd.DataFrame(row_values, columns=column_names, dtype=object) #Creating the Data Frame
-        df = df.T #Transposes the data frame 90 degrees CCW
+        df = df.T #Transposes the Data Frame 90 degrees CCW
         column_names = list(filter(len, column_names)) #Removes all the elements in the array with an empty string
-        print(column_names)
         df.columns=column_names #Renames the columns after rotation
-        df.index = np.arange(0, associate_count, 1) #Renames the indexes aeftr rotation
+        df.index = np.arange(0, associate_count, 1) #Renames the indexes after rotation
 
         return df      
 

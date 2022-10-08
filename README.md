@@ -12,7 +12,7 @@
 > &rarr; Insert the exported **quizzes JSON file** and the cohort's **batch report** (also JSON) in the **"input" folder** <br>
 > &rarr; [cmd] python3 app.py <br>
 
-Check the outputs folder for the resulting Excel (.xlsx) file. <br>
+Check the **output** folder for the resulting Excel (.xlsx) file. <br>
 
   
 
