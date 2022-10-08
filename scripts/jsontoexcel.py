@@ -44,7 +44,7 @@ class jsonToExcel:
     def identifyJsonFile(self, json_data):
         """Identifies the two given json files to see which one is the quiz results, and which is the batch report.
 
-        inputs:
+        params:
             json_data: [list: string]
 
         output: 
@@ -70,7 +70,7 @@ class jsonToExcel:
     def exportToExcel(self, json_data_df):
         """Transforms the fully formatted DataFrame into a readable format for Excel.
 
-        inputs:
+        params:
             json_data_df: [Pandas DataFrame]
 
         output: 
@@ -81,7 +81,7 @@ class jsonToExcel:
     def matchAssociateIDtoName(self, raw_json_batch_report, associate_ids, associate_ids_set):
         """Matches the inputted associate salesforce ids to their name from the batch report.
 
-        inputs:
+        params:
             raw_json_batch_report: [JSON]
             associate_ids: [array: str]
             associate_ids_set: [set: str]
@@ -109,7 +109,7 @@ class jsonToExcel:
     def parseJsonData(self, json_data):
         """Parses the raw json file into a formatted version for excel.
 
-        inputs:
+        params:
             json_data: [JSON]
 
         output: 
@@ -147,7 +147,7 @@ class jsonToExcel:
     def quizScoresToDataFrame(self, column_names, row_values, associate_ids, raw_json_batch_report, trainee_ids):
         """Translates the associate information alongside their quiz scores to a Pandas DataFrame.
 
-        inputs:
+        params:
             column_names: [list: str]
             row_values: [list: str]
             associate_ids: [array: str]
