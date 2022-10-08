@@ -71,7 +71,7 @@ class jsonToExcel:
         """Transforms the fully formatted DataFrame into a readable format for Excel.
 
         inputs:
-            json_data_df: Pandas DataFrame
+            json_data_df: [Pandas DataFrame]
 
         output: 
             .xlsx file
@@ -82,7 +82,7 @@ class jsonToExcel:
         """Matches the inputted associate salesforce ids to their name from the batch report.
 
         inputs:
-            raw_json_batch_report: [dict]
+            raw_json_batch_report: [JSON]
             associate_ids: [array: str]
             associate_ids_set: [set: str]
 
@@ -110,7 +110,7 @@ class jsonToExcel:
         """Parses the raw json file into a formatted version for excel.
 
         inputs:
-            json_data: [dict]
+            json_data: [JSON]
 
         output: 
             df: [Pandas DataFrame]
