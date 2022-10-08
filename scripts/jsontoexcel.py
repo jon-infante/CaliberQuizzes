@@ -7,7 +7,7 @@ import numpy as np
 
 class jsonToExcel:
     def __init__(self):
-        pass
+        self.associate_count = 30 #Change number here if there is a larger batch, or smaller if you want a cleaner excel sheet to match associate count
 
     def main(self):
         try:
@@ -15,7 +15,7 @@ class jsonToExcel:
         except:
             print("\nYou must have at least the exported quiz results in the input folder, batch report is optional.")
             return
-        parsed_json_data = self.parseJsonData(json_data, 25) #Change number here if there is a larger batch, or smaller if you want a cleaner excel sheet to match associate count
+        parsed_json_data = self.parseJsonData(json_data)
         self.exportToExcel(parsed_json_data)
 
         print("\nSuccess! Check the output folder for the Excel file.")
@@ -106,7 +106,7 @@ class jsonToExcel:
 
         return associate_names
 
-    def parseJsonData(self, json_data, associate_count):
+    def parseJsonData(self, json_data):
         """Parses the raw json file into a formatted version for excel.
 
         inputs:
@@ -117,15 +117,15 @@ class jsonToExcel:
         """
         raw_json_quiz = json_data["quizResults"]["quizzes"]
         raw_json_batch_report = json_data["batchReport"]
-        associates = ['']*associate_count #Preset with empty strings
+        associates = ['']*self.associate_count #Preset with empty strings
         assoc_ind = 0
         trainee_ids = set()
         quizzes = dict() #Both the quiz name, and a list of grades
-        pandas_column_names = ['']*(associate_count-1) #Preset with empty strings
+        pandas_column_names = ['']*(self.associate_count-1) #Preset with empty strings
         pan_col_ind = 0
         pandas_row_values = list()
         for i in range(len(raw_json_quiz)): #Iterate over all the quizzes
-            quiz_scores = np.zeros(associate_count)
+            quiz_scores = np.zeros(self.associate_count)
             quizTitle = raw_json_quiz[i]["title"] + f' ({raw_json_quiz[i]["category"]})'
             pandas_column_names[pan_col_ind] = quizTitle #Replaces empty string to a list of all the quiz names and categories associated with it
             pan_col_ind += 1
@@ -140,18 +140,17 @@ class jsonToExcel:
             quizzes[quizTitle] = quiz_scores #Adds the associated quiz scores alongside the quiz name
             pandas_row_values.append(quiz_scores.tolist())
 
-        df = self.quizScoresToDataFrame(pandas_column_names, pandas_row_values, associates, associate_count, raw_json_batch_report, trainee_ids)        
+        df = self.quizScoresToDataFrame(pandas_column_names, pandas_row_values, associates, raw_json_batch_report, trainee_ids)        
 
         return df
 
-    def quizScoresToDataFrame(self, column_names, row_values, associate_ids, associate_count, raw_json_batch_report, trainee_ids):
+    def quizScoresToDataFrame(self, column_names, row_values, associate_ids, raw_json_batch_report, trainee_ids):
         """Translates the associate information alongside their quiz scores to a Pandas DataFrame.
 
         inputs:
             column_names: [list: str]
             row_values: [list: str]
             associate_ids: [array: str]
-            associate_count: [int]
             raw_json_batch_report: [JSON]
             trainee_ids: [set: str]
 
@@ -170,7 +169,7 @@ class jsonToExcel:
         df = df.T #Transposes the Data Frame 90 degrees CCW
         column_names = list(filter(len, column_names)) #Removes all the elements in the array with an empty string
         df.columns=column_names #Renames the columns after rotation
-        df.index = np.arange(0, associate_count, 1) #Renames the indexes after rotation
+        df.index = np.arange(0, self.associate_count, 1) #Renames the indexes after rotation
 
         return df      
 
