@@ -1,0 +1,404 @@
+{
+ "batchId": 1320,
+ "batch": "a193g000002YQVUAA4",
+ "quizzes": [
+  {
+   "title": "Week 1 Concept Quiz",
+   "category": "Java",
+   "batchCurriculumActivityId": 235790,
+   "grades": [
+    {
+     "traineeId": 140906,
+     "trainee": "0033g000018Qu14AAC",
+     "grade": 85.12
+    },
+    {
+     "traineeId": 143045,
+     "trainee": "0033g00001DjsfKAAR",
+     "grade": 72.14
+    },
+    {
+     "traineeId": 143117,
+     "trainee": "0033g00001DjqF5AAJ",
+     "grade": 95
+    },
+    {
+     "traineeId": 143441,
+     "trainee": "0033g00001Dk32nAAB",
+     "grade": 83.33
+    },
+    {
+     "traineeId": 143506,
+     "trainee": "0033g00001CHv0UAAT",
+     "grade": 91.67
+    },
+    {
+     "traineeId": 143527,
+     "trainee": "0033g00001CIyF5AAL",
+     "grade": 85
+    },
+    {
+     "traineeId": 143788,
+     "trainee": "0033g00001DkP1gAAF",
+     "grade": 90
+    },
+    {
+     "traineeId": 144688,
+     "trainee": "0033g00000rg1PNAAY",
+     "grade": 92.86
+    }
+   ]
+  },
+  {
+   "title": "Week 1 Code Quiz",
+   "category": "Java",
+   "batchCurriculumActivityId": 235791,
+   "grades": [
+    {
+     "traineeId": 140906,
+     "trainee": "0033g000018Qu14AAC",
+     "grade": 81.25
+    },
+    {
+     "traineeId": 143045,
+     "trainee": "0033g00001DjsfKAAR",
+     "grade": 6.25
+    },
+    {
+     "traineeId": 143117,
+     "trainee": "0033g00001DjqF5AAJ",
+     "grade": 100
+    },
+    {
+     "traineeId": 143441,
+     "trainee": "0033g00001Dk32nAAB",
+     "grade": 87.5
+    },
+    {
+     "traineeId": 143506,
+     "trainee": "0033g00001CHv0UAAT",
+     "grade": 87.5
+    },
+    {
+     "traineeId": 143527,
+     "trainee": "0033g00001CIyF5AAL",
+     "grade": 62.5
+    },
+    {
+     "traineeId": 143788,
+     "trainee": "0033g00001DkP1gAAF",
+     "grade": 81.25
+    },
+    {
+     "traineeId": 144688,
+     "trainee": "0033g00000rg1PNAAY",
+     "grade": 75
+    }
+   ]
+  },
+  {
+   "title": "Week 2 Concept Quiz",
+   "category": "Java",
+   "batchCurriculumActivityId": 235792,
+   "grades": [
+    {
+     "traineeId": 140906,
+     "trainee": "0033g000018Qu14AAC",
+     "grade": 71.65
+    },
+    {
+     "traineeId": 143045,
+     "trainee": "0033g00001DjsfKAAR",
+     "grade": 81.65
+    },
+    {
+     "traineeId": 143117,
+     "trainee": "0033g00001DjqF5AAJ",
+     "grade": 95
+    },
+    {
+     "traineeId": 143441,
+     "trainee": "0033g00001Dk32nAAB",
+     "grade": 76.7
+    },
+    {
+     "traineeId": 143506,
+     "trainee": "0033g00001CHv0UAAT",
+     "grade": 79.15
+    },
+    {
+     "traineeId": 143527,
+     "trainee": "0033g00001CIyF5AAL",
+     "grade": 75
+    },
+    {
+     "traineeId": 143788,
+     "trainee": "0033g00001DkP1gAAF",
+     "grade": 85
+    },
+    {
+     "traineeId": 144688,
+     "trainee": "0033g00000rg1PNAAY",
+     "grade": 73.3
+    }
+   ]
+  },
+  {
+   "title": "Week 2 Code Quiz",
+   "category": "Java",
+   "batchCurriculumActivityId": 235793,
+   "grades": [
+    {
+     "traineeId": 140906,
+     "trainee": "0033g000018Qu14AAC",
+     "grade": 75
+    },
+    {
+     "traineeId": 143045,
+     "trainee": "0033g00001DjsfKAAR",
+     "grade": 87.5
+    },
+    {
+     "traineeId": 143117,
+     "trainee": "0033g00001DjqF5AAJ",
+     "grade": 93.75
+    },
+    {
+     "traineeId": 143441,
+     "trainee": "0033g00001Dk32nAAB",
+     "grade": 93.75
+    },
+    {
+     "traineeId": 143506,
+     "trainee": "0033g00001CHv0UAAT",
+     "grade": 93.75
+    },
+    {
+     "traineeId": 143527,
+     "trainee": "0033g00001CIyF5AAL",
+     "grade": 87.5
+    },
+    {
+     "traineeId": 143788,
+     "trainee": "0033g00001DkP1gAAF",
+     "grade": 87.5
+    },
+    {
+     "traineeId": 144688,
+     "trainee": "0033g00000rg1PNAAY",
+     "grade": 86.25
+    }
+   ]
+  },
+  {
+   "title": "Week 3 Concept Quiz",
+   "category": "SQL",
+   "batchCurriculumActivityId": 235794,
+   "grades": [
+    {
+     "traineeId": 140906,
+     "trainee": "0033g000018Qu14AAC",
+     "grade": 58.33
+    },
+    {
+     "traineeId": 143045,
+     "trainee": "0033g00001DjsfKAAR",
+     "grade": 68.33
+    },
+    {
+     "traineeId": 143117,
+     "trainee": "0033g00001DjqF5AAJ",
+     "grade": 81.67
+    },
+    {
+     "traineeId": 143441,
+     "trainee": "0033g00001Dk32nAAB",
+     "grade": 86.67
+    },
+    {
+     "traineeId": 143506,
+     "trainee": "0033g00001CHv0UAAT",
+     "grade": 86.67
+    },
+    {
+     "traineeId": 143527,
+     "trainee": "0033g00001CIyF5AAL",
+     "grade": 65
+    },
+    {
+     "traineeId": 143788,
+     "trainee": "0033g00001DkP1gAAF",
+     "grade": 73.33
+    },
+    {
+     "traineeId": 144688,
+     "trainee": "0033g00000rg1PNAAY",
+     "grade": 81.67
+    }
+   ]
+  },
+  {
+   "title": "Week 3 Code Quiz",
+   "category": "SQL",
+   "batchCurriculumActivityId": 235795,
+   "grades": [
+    {
+     "traineeId": 140906,
+     "trainee": "0033g000018Qu14AAC",
+     "grade": 61.17
+    },
+    {
+     "traineeId": 143045,
+     "trainee": "0033g00001DjsfKAAR",
+     "grade": 50
+    },
+    {
+     "traineeId": 143117,
+     "trainee": "0033g00001DjqF5AAJ",
+     "grade": 75
+    },
+    {
+     "traineeId": 143441,
+     "trainee": "0033g00001Dk32nAAB",
+     "grade": 80.58
+    },
+    {
+     "traineeId": 143506,
+     "trainee": "0033g00001CHv0UAAT",
+     "grade": 41.67
+    },
+    {
+     "traineeId": 143527,
+     "trainee": "0033g00001CIyF5AAL",
+     "grade": 80.58
+    },
+    {
+     "traineeId": 143788,
+     "trainee": "0033g00001DkP1gAAF",
+     "grade": 66.67
+    },
+    {
+     "traineeId": 144688,
+     "trainee": "0033g00000rg1PNAAY",
+     "grade": 41.67
+    }
+   ]
+  },
+  {
+   "title": "Week 1 Code Quiz (Make Up)",
+   "category": "Java",
+   "batchCurriculumActivityId": 237193,
+   "grades": [
+    {
+     "traineeId": 143045,
+     "trainee": "0033g00001DjsfKAAR",
+     "grade": 81.25
+    }
+   ]
+  },
+  {
+   "title": "Week 4 Code Quiz",
+   "category": "Java",
+   "batchCurriculumActivityId": 241391,
+   "grades": [
+    {
+     "traineeId": 140906,
+     "trainee": "0033g000018Qu14AAC",
+     "grade": 60
+    },
+    {
+     "traineeId": 142408,
+     "trainee": "0033g000018QlbnAAC",
+     "grade": 100
+    },
+    {
+     "traineeId": 143045,
+     "trainee": "0033g00001DjsfKAAR",
+     "grade": 80
+    },
+    {
+     "traineeId": 143117,
+     "trainee": "0033g00001DjqF5AAJ",
+     "grade": 100
+    },
+    {
+     "traineeId": 143441,
+     "trainee": "0033g00001Dk32nAAB",
+     "grade": 100
+    },
+    {
+     "traineeId": 143506,
+     "trainee": "0033g00001CHv0UAAT",
+     "grade": 100
+    },
+    {
+     "traineeId": 143527,
+     "trainee": "0033g00001CIyF5AAL",
+     "grade": 80
+    },
+    {
+     "traineeId": 143788,
+     "trainee": "0033g00001DkP1gAAF",
+     "grade": 100
+    },
+    {
+     "traineeId": 144688,
+     "trainee": "0033g00000rg1PNAAY",
+     "grade": 80
+    }
+   ]
+  },
+  {
+   "title": "Week 4 Conceptual Quiz",
+   "category": "Servlet",
+   "batchCurriculumActivityId": 241422,
+   "grades": [
+    {
+     "traineeId": 140906,
+     "trainee": "0033g000018Qu14AAC",
+     "grade": 61.5
+    },
+    {
+     "traineeId": 142408,
+     "trainee": "0033g000018QlbnAAC",
+     "grade": 86.2
+    },
+    {
+     "traineeId": 143045,
+     "trainee": "0033g00001DjsfKAAR",
+     "grade": 74.3
+    },
+    {
+     "traineeId": 143117,
+     "trainee": "0033g00001DjqF5AAJ",
+     "grade": 96
+    },
+    {
+     "traineeId": 143441,
+     "trainee": "0033g00001Dk32nAAB",
+     "grade": 77.7
+    },
+    {
+     "traineeId": 143506,
+     "trainee": "0033g00001CHv0UAAT",
+     "grade": 80
+    },
+    {
+     "traineeId": 143527,
+     "trainee": "0033g00001CIyF5AAL",
+     "grade": 72.1
+    },
+    {
+     "traineeId": 143788,
+     "trainee": "0033g00001DkP1gAAF",
+     "grade": 87.1
+    },
+    {
+     "traineeId": 144688,
+     "trainee": "0033g00000rg1PNAAY",
+     "grade": 74.8
+    }
+   ]
+  }
+ ]
+}
