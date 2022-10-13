@@ -110,7 +110,7 @@ class jsonToExcel:
         """Parses the raw json file into a formatted version for excel.
 
         params:
-            json_data: [JSON]
+            json_data: [dict: <string, JSON>]
 
         output: 
             df: [Pandas DataFrame]
